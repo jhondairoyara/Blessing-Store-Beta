@@ -1,0 +1,53 @@
+/* src/components/FavoriteToggle/FavoriteToggle.css */
+
+/* Estilos base del botón de favorito */
+.btn-favorite {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    outline: none;
+}
+
+/* Efecto hover del botón de favorito (cuando no está deshabilitado) */
+.btn-favorite:hover:not(:disabled) {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Efecto activo (clic) del botón de favorito (cuando no está deshabilitado) */
+.btn-favorite:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+/* Estilos del botón de favorito deshabilitado */
+.btn-favorite:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Estilos del icono de corazón */
+.heart-icon {
+    width: 28px;
+    height: 28px;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+/* Color del icono de corazón vacío */
+.btn-favorite .heart-icon {
+    filter: brightness(0.5);
+}
+
+/* Color del icono de corazón lleno */
+.btn-favorite.is-favorite .heart-icon {
+    filter: invert(21%) sepia(93%) saturate(7456%) hue-rotate(357deg) brightness(97%) contrast(97%);
+}

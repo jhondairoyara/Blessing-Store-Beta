@@ -1,0 +1,204 @@
+/* src/pages/InformativePages/PoliticasPrivacidadPage.css */
+
+/*
+ * Archivo: PoliticasPrivacidadPage.css
+ */
+
+.privacy-page-container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 4vw, 4rem) clamp(3rem, 6vw, 5rem);
+    
+    color: var(--color-white);
+    font-family: 'Poppins-Medium', sans-serif;
+    line-height: 1.6;
+}
+
+.privacy-page-title {
+    font-family: 'LeagueSpartan-Bold', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.8rem;
+}
+
+.privacy-page-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: clamp(7rem, 18vw, 14rem);
+    height: 0.5rem;
+    background-color: var(--color-primary);
+    border-radius: 0.3rem;
+}
+
+.privacy-subtitle {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    color: var(--color-primary);
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.3rem;
+}
+
+.privacy-subtitle::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: clamp(4rem, 12vw, 8rem);
+    height: 0.3rem;
+    background-color: var(--color-primary);
+    border-radius: 0.2rem;
+}
+
+.privacy-section {
+    margin-bottom: clamp(3.5rem, 7vw, 6rem);
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.section-paragraph {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+    color: var(--color-white);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.info-list,
+.tech-list {
+    font-size: 1.4rem;
+    color: var(--color-white);
+    max-width: 800px;
+    margin: 1.5rem auto 2.5rem auto;
+    text-align: left;
+    list-style: disc; /* Viñetas */
+    padding-left: 2.5rem;
+}
+
+.info-list li,
+.tech-list li {
+    margin-bottom: 0.8rem;
+}
+
+.info-list li:last-child,
+.tech-list li:last-child {
+    margin-bottom: 0;
+}
+
+.info-list strong,
+.tech-list strong {
+    color: var(--color-primary);
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+/* Para la sub-lista dentro de tech-list (Comunicación y Estabilidad) */
+.tech-list ul {
+    list-style: circle; /* Viñetas diferentes para sub-elementos */
+    padding-left: 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.tech-list ul li {
+    margin-bottom: 0.5rem;
+}
+
+
+.contact-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    font-family: 'Poppins-Bold', sans-serif; /* Para destacar la información de contacto */
+}
+
+.section-separator {
+    border: none;
+    border-top: 0.1rem solid var(--color-white);
+    width: 60%; /* Ajuste a 60% */
+    margin: 1.5rem auto;
+    opacity: 0.4;
+}
+
+/* Última sección (para ajustar el margen si es necesario) */
+.last-privacy-section {
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .privacy-page-container {
+        padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 3vw, 2rem) clamp(2rem, 4vw, 3rem);
+    }
+
+    .privacy-page-title {
+        font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+        margin-bottom: 3rem;
+    }
+
+    .privacy-subtitle {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        margin-bottom: 2rem;
+    }
+
+    .section-paragraph,
+    .info-list,
+    .info-list li,
+    .tech-list,
+    .tech-list li,
+    .tech-list ul li {
+        font-size: 1.4rem;
+    }
+
+    .section-separator {
+        width: 70%;
+        margin: clamp(1.8rem, 3.5vw, 2.5rem) auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-page-container {
+        padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 2vw, 1.5rem) clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .privacy-page-title {
+        font-size: clamp(2.6rem, 5.2vw, 3.5rem);
+        margin-bottom: 2.5rem;
+    }
+
+    .privacy-subtitle {
+        font-size: clamp(1.7rem, 3.4vw, 2.2rem);
+        margin-bottom: 1.8rem;
+    }
+
+    .section-paragraph,
+    .info-list,
+    .info-list li,
+    .tech-list,
+    .tech-list li,
+    .tech-list ul li {
+        font-size: 1.4rem;
+    }
+
+    .section-separator {
+        width: 80%;
+        margin: clamp(1.5rem, 3vw, 2rem) auto;
+    }
+}

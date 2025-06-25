@@ -1,0 +1,402 @@
+/* src/pages/AccessPage/AccessPage.css */
+
+.access-top-bar {
+    width: 100%;
+    height: 1rem;
+    background-color: var(--color-primary);
+}
+
+.access-container {
+    margin: 4rem auto;
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    border-radius: 2rem;
+    overflow: hidden;
+    min-height: 80vh;
+    position: relative;
+}
+
+.access-left-section {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-secondary);
+    z-index: 2;
+    color: var(--color-white);
+}
+
+.access-logo {
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.access-left-section .access-slogan {
+    font-family: 'AlexBrush-Regular', cursive;
+    font-size: 4.5rem;
+    margin: 0.5rem 0;
+}
+
+.access-heading-container h1 {
+    font-family: 'LeagueSpartan-Bold', sans-serif;
+    margin: 1.2rem 0;
+    font-size: 5.5rem;
+    line-height: 1.1;
+}
+
+.access-heading-container .access-heading-login-container,
+.access-heading-container .access-heading-signup-container {
+    display: none;
+}
+
+.access-heading-container .access-heading-login-container.active,
+.access-heading-container .access-heading-signup-container.active {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.access-right-section {
+    background-color: var(--color-tertiary);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.access-form-wrapper {
+    width: 100%;
+    max-width: 35rem;
+    padding: 2rem;
+}
+
+.access-form-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    border-radius: 10rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+}
+
+.access-form-header label {
+    flex: 1;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-tertiary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Poppins-Medium', sans-serif;
+    border-radius: 10rem;
+}
+
+.access-form-header label.access-active-tab {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.access-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.access-form-content.active-form {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.access-input-group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 10rem;
+    padding: 0.8rem 1rem;
+    height: 4.5rem;
+    box-shadow: inset 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+.access-input-group img.access-input-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    filter: brightness(0.5);
+}
+
+.access-input-group input,
+.access-input-group select {
+    flex: 1;
+    font-size: 1.6rem;
+    border: none;
+    background: none;
+    color: var(--color-tertiary);
+    font-family: 'Poppins-Medium', sans-serif;
+    padding: 0.6rem 0;
+    width: 100%;
+}
+
+.access-input-group input:focus,
+.access-input-group select:focus {
+    outline: none;
+}
+
+.access-input-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%231b2027' d='M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    background-size: 1.2rem;
+    padding-right: 4rem;
+}
+
+.access-field-error + .access-input-group {
+    margin-top: -0.5rem;
+}
+
+.access-submit-button {
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-family: 'Poppins-Medium';
+    margin-top: 1rem;
+    color: var(--color-tertiary);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.access-submit-button:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+    transform: translateY(-0.2rem);
+}
+
+.access-submit-button:disabled {
+    background-color: var(--color-gray-medium);
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+    transform: none;
+    color: var(--color-white);
+}
+
+.access-or-separator {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    font-family: 'Poppins-Medium', sans-serif;
+    position: relative;
+}
+
+.access-or-separator::before,
+.access-or-separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 0.1rem;
+    background-color: var(--color-white);
+}
+
+.access-or-separator::before { left: 0; }
+.access-or-separator::after { right: 0; }
+
+.access-social-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.access-social-login .access-social-button {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-tertiary);
+    text-decoration: none;
+    padding: 1.2rem 2rem;
+    border-radius: 10rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-family: 'Poppins-Medium', sans-serif;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.15);
+}
+
+.access-social-login .access-social-button:hover {
+    background-color: var(--soft-ivory);
+    transform: translateY(-0.1rem);
+}
+
+.access-social-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 1.2rem;
+}
+
+.access-footer-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.access-footer-links a {
+    font-size: 1.4rem;
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: 'Poppins-Medium', sans-serif;
+    background-color: transparent;
+}
+
+.access-error-message,
+.access-success-message {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.access-error-message {
+    color: var(--color-white);
+    background-color: var(--color-quaternary);
+}
+
+.access-success-message {
+    color: var(--color-tertiary);
+    background-color: var(--color-primary);
+}
+
+.access-field-error {
+    color: var(--color-quaternary);
+    font-size: 1.2rem;
+    margin: 0.1rem 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins-Medium';
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.access-form-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.access-prev-button,
+.access-next-button {
+    padding: 1.2rem 2.5rem;
+    border-radius: 1.2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    text-align: center;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins-Medium';
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.access-form-navigation .access-next-button,
+.access-form-navigation .access-submit-button {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    border: none;
+    margin-left: 1rem;
+    margin-top: 0;
+}
+
+.access-form-navigation .access-next-button:hover,
+.access-form-navigation .access-submit-button:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+    transform: translateY(-0.2rem);
+}
+
+.access-form-navigation .access-next-button:disabled,
+.access-form-navigation .access-submit-button:disabled {
+    background-color: var(--color-gray-medium);
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    color: var(--color-white);
+}
+
+.access-prev-button {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1.5px solid var(--color-white);
+    margin-right: 1rem;
+    box-shadow: none;
+}
+
+.access-prev-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    border-color: var(--color-primary);
+    transform: translateY(-0.2rem);
+}
+
+.access-prev-button:disabled {
+    color: var(--color-gray-medium);
+    border-color: var(--color-gray-medium);
+    cursor: not-allowed;
+    background-color: transparent;
+    transform: none;
+}
+
+.access-form-navigation button:only-child {
+    width: 100%;
+    margin: 0;
+}
+
+.access-form-signup .access-submit-button {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    border: none;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.access-form-signup .access-submit-button:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+    transform: translateY(-0.2rem);
+}
+
+.access-form-signup .access-submit-button:disabled {
+    background-color: var(--color-gray-medium);
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    color: var(--color-white);
+}

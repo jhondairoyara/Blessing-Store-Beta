@@ -1,0 +1,221 @@
+/* src/components/FavoriteItem/FavoriteItem.css */
+
+.favorite-item {
+    display: flex;
+    align-items: stretch;
+    border: 0.1rem solid var(--border-on-light-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--color-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 85rem;
+    margin: 2.0rem auto;
+    text-align: left;
+    font-family: 'Poppins-Medium';
+    position: relative;
+}
+
+/* Efecto hover para la tarjeta del ítem favorito */
+.favorite-item:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor de la imagen del producto */
+.favorite-item__image-wrapper {
+    flex-shrink: 0;
+    width: 12rem;
+    height: 12rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-light-variant);
+    border-right: 0.1rem solid var(--border-on-light-bg);
+    padding: 1rem;
+    box-sizing: border-box; 
+}
+
+/* Estilos de la imagen del producto */
+.favorite-item__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Sección de detalles del producto */
+.favorite-item__details {
+    flex-grow: 0.7; 
+    flex-basis: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    gap: 0.3rem;
+    height: 12rem;
+    box-sizing: border-box;
+    border-right: 0.1rem solid var(--border-on-light-bg);
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+/* Enlace del nombre del producto */
+.favorite-item__name-link {
+    text-decoration: none;
+    color: var(--text-on-light-bg);
+    transition: color 0.2s ease;
+}
+
+/* Efecto hover en el enlace del nombre del producto */
+.favorite-item__name-link:hover {
+    color: var(--color-quaternary);
+}
+
+/* Nombre del producto */
+.favorite-item__name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+}
+
+/* Atributos del producto (ej. color, talla) */
+.favorite-item__attributes {
+    font-size: 1.0rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Precio del producto */
+.favorite-item__price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-quaternary);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Información de stock del producto */
+.favorite-item__stock-info {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    margin-top: 0.5rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilo para stock bajo */
+.favorite-item__stock-info.low-stock {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Estilo para producto agotado */
+.favorite-item__stock-info.out-of-stock {
+    color: var(--color-quaternary);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Sección de botones de acción */
+.favorite-item__actions {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    width: 20rem;
+    height: 12rem;
+    box-sizing: border-box;
+}
+
+/* Botón "Agregar al carrito" */
+.favorite-item__add-to-cart-btn {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: none;
+    padding: 1.2rem 1.8rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-grow: 1; 
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Efecto hover para el botón "Agregar al carrito" */
+.favorite-item__add-to-cart-btn:hover:not(:disabled) {
+    background-color: var(--color-white); 
+    border: 1px solid var(--color-secondary);
+    transform: translateY(-0.2rem);
+}
+
+/* Estilo para el botón "Agregar al carrito" deshabilitado */
+.favorite-item__add-to-cart-btn:disabled {
+    background-color: var(--color-gray-medium);
+    color: var(--color-gray-dark);
+    cursor: not-allowed;
+    opacity: 0.7;
+    filter: grayscale(100%);
+}
+
+/* Icono dentro del botón "Agregar al carrito" */
+.favorite-item__add-to-cart-btn img {
+    width: 2rem;
+    height: 2rem;
+    filter: brightness(0) invert(10%) sepia(20%) saturate(200%) hue-rotate(180deg) brightness(80%) contrast(100%);
+}
+
+/* Botón para quitar de favoritos */
+.favorite-item__remove-btn {
+    background-color: transparent;
+    border: 0.1rem solid var(--border-on-light-bg);
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+/* Efecto hover para el botón de quitar de favoritos */
+.favorite-item__remove-btn:hover {
+    background-color: rgba(237, 66, 66, 0.1);
+    border-color: var(--color-quaternary);
+}
+
+/* Icono dentro del botón de quitar de favoritos */
+.favorite-item__remove-btn img {
+    width: 2.4rem;
+    height: 2.4rem;
+    filter: invert(20%) sepia(80%) saturate(2000%) hue-rotate(340deg) brightness(90%);
+    transition: filter 0.2s ease;
+}

@@ -1,0 +1,364 @@
+/* src/components/Header/Header.css */
+
+/* Estilos generales del encabezado */
+header {
+    background-color: var(--color-tertiary);
+    height: 16rem;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 2.5rem;
+    border-bottom-left-radius: 4.0rem;
+    border-bottom-right-radius: 4.0rem;
+}
+
+/* Primera sección del encabezado (logo y ubicación) */
+.header__first-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.0rem;
+    flex: 1.4;
+}
+
+/* Contenedor del logo */
+.header__logo {
+    width: 4rem;
+    height: auto;
+}
+
+/* Imagen del logo */
+.header__logo img {
+    width: 5.0rem;
+    height: auto;
+}
+
+/* Contenedor del logo y el título */
+.header__logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Estilos del título del encabezado */
+.header__title a {
+    font-family: 'AlexBrush-Regular';
+    font-size: 3.6rem;
+    color: var(--color-white);
+    text-decoration: none;
+    margin-left: 1.6rem;
+}
+
+/* Estilos del selector de ubicación */
+.header__location {
+    font-family: 'Poppins-Bold';
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 1.0rem;
+    font-size: 1.2rem;
+    width: 15rem;
+    height: 5.0rem;
+    color: var(--color-white);
+    position: relative;
+    cursor: pointer;
+}
+
+/* Icono de ubicación */
+.header__location img {
+    width: 2.4rem;
+}
+
+/* Estilos del formulario de ubicación (inicialmente oculto) */
+.location-form {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: var(--color-tertiary);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 26rem;
+    z-index: 1000;
+    color: var(--color-white);
+}
+
+/* Hace visible el formulario de ubicación al pasar el ratón por el selector */
+.header__location:hover .location-form {
+    display: flex;
+}
+
+/* Título dentro del formulario de ubicación */
+.location-form .location-title {
+    font-size: 1.4rem;
+    font-family: 'Poppins-Bold';
+    margin-bottom: 0.3rem;
+}
+
+/* Subtítulo dentro del formulario de ubicación */
+.location-form .location-subtitle {
+    font-size: 1rem;
+    font-family: 'Poppins-Medium';
+    margin-bottom: 1rem;
+}
+
+/* Etiquetas de los campos del formulario de ubicación */
+.location-form label {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-family: 'Poppins-Bold';
+}
+
+/* Estilos para select e input dentro del formulario de ubicación */
+.location-form select,
+.location-form input {
+    margin-top: 0.3rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-family: 'Poppins-Medium';
+}
+
+/* Placeholder para el input del formulario de ubicación */
+.location-form input::placeholder {
+    color: var(--color-white);
+}
+
+/* Botón de envío del formulario de ubicación */
+.location-form .location-submit {
+    margin-top: 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: none;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    font-family: 'Poppins-Bold';
+    cursor: pointer;
+}
+
+/* Segunda sección del encabezado (búsqueda y navegación) */
+.header__second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+    flex: 3;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Formulario de búsqueda */
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 80rem;
+    height: 4.2rem;
+    align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: 2.5rem;
+    padding: 0 1.2rem;
+    gap: 0.8rem;
+    overflow: hidden;
+    flex: 1;
+}
+
+/* Campo de input de búsqueda */
+.search-form input[type="search"] {
+    font-family: 'Poppins-Medium';
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    padding: 0.8rem 1rem;
+    width: 100%;
+}
+
+/* Placeholder del input de búsqueda */
+.search-form input::placeholder {
+    color: var(--color-white);
+}
+
+/* Botón de envío del formulario de búsqueda */
+.search-form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen del botón de búsqueda */
+.search-form button img {
+    width: 2rem;
+    height: auto;
+}
+
+/* Lista de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+}
+
+/* Elementos de la lista de navegación */
+nav li {
+    position: relative;
+}
+
+/* Enlaces de navegación */
+nav a {
+    font-family: 'Poppins-Bold';
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+/* Efecto hover en los enlaces de navegación */
+nav a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+/* Tercera sección del encabezado (acceso, notificaciones, carrito) */
+.header__third-section {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* Enlace de acceso a cuenta o perfil */
+.header__third-section #access {
+    font-family: 'Poppins-Medium';
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover en el enlace de acceso */
+.header__third-section #access:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    transform: translateY(-0.2rem);
+}
+
+/* Imagen dentro del enlace de acceso */
+.header__third-section #access img {
+    width: 2.4rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efecto hover en la imagen del enlace de acceso */
+.header__third-section #access:hover img {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+}
+
+/* Estilos para los enlaces de notificación y carrito */
+.header__third-section > a:not(#access) {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Contenedor para elementos con dropdown */
+.dropdown {
+    position: relative;
+}
+
+/* Botón que activa el dropdown */
+.dropdown-toggle {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Poppins-Bold';
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Efecto hover en el botón del dropdown */
+.dropdown-toggle:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+/* Menú desplegable del dropdown (inicialmente oculto) */
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    background-color: var(--color-gray);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    z-index: 1000;
+    min-width: 16rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0s 0.2s;
+}
+
+/* Elementos de la lista del menú desplegable */
+.dropdown-menu li {
+    margin-bottom: 0.5rem;
+}
+
+/* Elimina el margen inferior del último elemento del menú desplegable */
+.dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+/* Enlaces dentro del menú desplegable */
+.dropdown-menu a {
+    color: var(--color-white);
+    background-color: var(--color-gray);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Efecto hover en los enlaces del menú desplegable */
+.dropdown-menu a:hover {
+    text-decoration: none;
+}
+
+/* Hace visible el menú desplegable al pasar el ratón por el dropdown */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s 0s;
+}

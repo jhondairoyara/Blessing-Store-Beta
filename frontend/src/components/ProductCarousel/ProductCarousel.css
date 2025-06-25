@@ -1,0 +1,92 @@
+/* src/components/ProductCarousel.css */
+
+/* Estilos generales para la sección de productos */
+.products {
+  padding: 2rem 3rem;
+}
+
+/* Título de la sección del carrusel de productos */
+.products__title {
+  font-family: 'LeagueSpartan-Bold';
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Contenedor principal del carrusel, controla el desbordamiento y posiciona las flechas */
+.products__carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Lista de tarjetas de productos con desplazamiento horizontal */
+.products__list {
+  display: flex;
+  overflow-x: auto; /* Habilita el desplazamiento horizontal */
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  scroll-behavior: smooth; /* Asegura un desplazamiento suave */
+}
+
+/* Oculta la barra de desplazamiento predeterminada en navegadores WebKit */
+.products__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilos para las flechas de navegación del carrusel (izquierda y derecha) */
+.products__arrow-left,
+.products__arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Posicionamiento específico para la flecha izquierda */
+.products__arrow-left {
+  left: 10px;
+}
+
+/* Posicionamiento específico para la flecha derecha */
+.products__arrow-right {
+  right: 10px;
+}
+
+/* Estilos para los iconos dentro de las flechas de navegación */
+.products__arrow-left img,
+.products__arrow-right img {
+  width: 24px;
+  height: auto;
+  filter: brightness(0) invert(1); /* Convierte el icono a color blanco */
+}
+
+/* Efectos al pasar el ratón sobre las flechas de navegación */
+.products__arrow-left:hover,
+.products__arrow-right:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Estilos para flechas cuando están deshabilitadas */
+.products__arrow-left:disabled,
+.products__arrow-right:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: translateY(-50%) scale(1);
+}

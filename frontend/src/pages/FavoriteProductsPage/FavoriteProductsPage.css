@@ -1,0 +1,96 @@
+/* src/pages/FavoriteProductsPage/FavoriteProductsPage.css */
+
+/* Contenedor principal de la página de favoritos. */
+.favorites-page-container {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--text-on-light-bg);
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins-Medium';
+}
+
+/* Estilos del título principal de la página. */
+.favorites-title {
+    font-size: 4.5em;
+    color: var(--color-white);
+    margin-bottom: 1.0rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Línea decorativa debajo del título principal. */
+.favorites-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+/* Estilos para mensajes de error y no favoritos. */
+.error-message,
+.no-favorites-message {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--color-white);
+    border: 1px solid var(--border-on-light-bg);
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Estilos específicos para mensajes de error. */
+.error-message {
+    color: var(--color-quaternary);
+    font-weight: 600;
+}
+
+/* Estilos del párrafo dentro del mensaje de no favoritos. */
+.no-favorites-message p {
+    font-size: 1.3rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 20px;
+}
+
+/* Estilos para los botones de acción principal. */
+.primary-action-button {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    font-family: 'Poppins-Medium';
+    font-weight: bold;
+}
+
+/* Efecto hover para los botones de acción principal. */
+.primary-action-button:hover {
+    background-color: #e6c54e;
+}
+
+/* Contenedor de la cuadrícula de ítems favoritos. */
+.favorite-items-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-top: 20px;
+    background-color: var(--color-white);
+    border-radius: 1.0rem;
+}

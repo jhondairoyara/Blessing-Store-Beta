@@ -1,0 +1,86 @@
+/* src/pages/HomePage/HomePage.css */
+
+.main-home {
+  padding: 4rem 3rem 0 3rem;
+}
+
+/* Sección principal de "hero" con título y líneas decorativas. */
+.main__hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Estilos del título dentro de la sección hero. */
+.main__hero h2 {
+  font-family: 'LeagueSpartan-Bold';
+  font-size: 5.2rem;
+  color: var(--color-white);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Estilos para las líneas decorativas en el hero. */
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-white);
+  opacity: 0.4;
+}
+
+/* Contenedor de los botones principales en el hero. */
+.main__hero-buttons {
+  font-family: 'LeagueSpartan-Bold';
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+/* Estilos base para los botones principales. */
+.main__btn {
+  text-align: center;
+  border-radius: 2rem;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  width: 22rem;
+  transition: all 0.3s ease;
+}
+
+/* Estilos para el texto fuerte dentro de los botones. */
+.main__btn strong {
+  font-size: 4.8rem;
+}
+
+/* Estilos para el texto secundario dentro de los botones. */
+.main__btn span {
+  font-size: 2.0rem;
+}
+
+/* Estilos específicos para el botón amarillo. */
+.main__btn--yellow {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  width: 50rem;
+  height: 10rem;
+}
+
+/* Estilos específicos para el botón oscuro. */
+.main__btn--dark {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+  width: 50rem;
+  height: 10rem;
+}
+
+/* Efecto hover para los botones principales. */
+.main__btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 1rem var(--color-tertiary);
+}

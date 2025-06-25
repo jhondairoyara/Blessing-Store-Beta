@@ -1,0 +1,67 @@
+/* src/assets/styles/globals.css */
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  /* Colores Principales de tu paleta */
+  --color-primary: #ffde59;         
+  --color-secondary: #13161c; 
+  --color-tertiary: #1b2027;
+  --color-quaternary: #ed4242;
+
+  /* Colores Neutrales y de Fondo */
+  --soft-ivory: #efeae4;
+  --color-white: #ffffff;
+  --color-gray: #2b2f36;            
+  --color-gray-medium: #888;          
+  --color-gray-dark: #444;            
+  --background-light-variant: #F5F7FA; 
+  --text-on-light-bg: var(--color-secondary);
+  --border-on-light-bg: var(--color-gray-medium);
+
+  /* ------------------------------------------- */
+
+  /* Botones Específicos */
+  --btn-checkout-bg: #27ae60; 
+  --btn-amount: #8888884a;      
+
+  /* Estados Hover de Botones */
+  --btn-hover-bg: var(--color-white);
+  --btn-hover-text: var(--color-secondary);
+  --btn-hover-border: var(--color-secondary);
+  --btn-hover-border-width: 0.1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-white);
+  border-radius: 1.0rem;
+  border: 0.2rem solid var(--color-tertiary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-white);
+}
+
+body {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}

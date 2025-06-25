@@ -1,0 +1,350 @@
+/* src/pages/ProfilePage/ProfilePage.css */
+
+.profile-container {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 3rem;
+    background-color: var(--color-secondary);
+    border-radius: 2rem;
+    font-family: 'Poppins-Medium';
+    color: var(--soft-ivory);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-title {
+    text-align: center;
+    color: var(--color-white);
+    font-size: 4.5rem;
+    font-family: 'LeagueSpartan-Bold';
+    line-height: 1.1;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.0rem;
+}
+
+.profile-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8rem;
+    height: 0.5rem;
+    background-color: var(--color-primary);
+    border-radius: 0.3rem;
+}
+
+.profile-section {
+    background-color: var(--color-tertiary);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.profile-section h2 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    font-family: 'Poppins-Medium';
+    margin-bottom: 1.5rem;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.profile-loading,
+.profile-error {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 2rem;
+    color: var(--soft-ivory);
+    background-color: var(--color-tertiary);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.profile-error {
+    color: var(--color-white);
+    background-color: var(--color-quaternary);
+}
+
+.profile-message {
+    padding: 1.2rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.profile-message.success {
+    background-color: var(--btn-checkout-bg);
+    color: var(--color-white);
+}
+
+.profile-message.error {
+    background-color: var(--color-quaternary);
+    color: var(--color-white);
+}
+
+/* Detalles del perfil - Vista de lectura */
+.profile-details-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.profile-details-item {
+    background-color: var(--color-gray);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-details-item:hover {
+    transform: translateY(-0.2rem);
+}
+
+.profile-details-item p {
+    font-size: 1.05rem;
+    color: var(--soft-ivory);
+    line-height: 1.4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.profile-details-item p strong {
+    color: var(--color-primary);
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.profile-icon {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    filter: invert(90%) sepia(5%) saturate(0%) hue-rotate(0deg) brightness(120%) contrast(100%);
+}
+
+.profile-edit-button {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-family: 'Poppins-Medium';
+    transition: all 0.3s ease;
+    display: block;
+    width: fit-content;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-edit-button:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+    transform: translateY(-0.2rem);
+}
+
+/* Formularios de edición y contraseña */
+.profile-edit-form,
+.profile-password-form {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.profile-input-group {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 10rem;
+    padding: 0.8rem 1rem;
+    height: 4.5rem;
+}
+
+.profile-input-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    filter: brightness(0.5);
+}
+
+.profile-input-group input,
+.profile-input-group select {
+    flex: 1;
+    font-size: 1.6rem;
+    border: none;
+    background: none;
+    color: var(--color-tertiary);
+    font-family: 'Poppins-Medium';
+    padding: 0.6rem 0;
+    width: 100%;
+}
+
+.profile-input-group input:focus,
+.profile-input-group select:focus {
+    outline: none;
+}
+
+.profile-input-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%231b2027' d='M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    background-size: 1.2rem;
+    padding-right: 4rem;
+}
+
+.profile-input-group select:disabled {
+    opacity: 0.0;
+    cursor: not-allowed;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23888' d='M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569z'/%3E%3C/svg%3E");
+}
+
+.profile-actions {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.profile-submit-button,
+.profile-cancel-button {
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-family: 'Poppins-Medium';
+    transition: all 0.3s ease;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-password-form .profile-submit-button {
+    width: 100%;
+}
+
+.profile-submit-button {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+}
+
+.profile-submit-button:hover:not(:disabled) {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+    transform: translateY(-0.2rem);
+}
+
+.profile-submit-button:disabled {
+    background-color: var(--color-gray-medium);
+    color: var(--color-white);
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+}
+
+.profile-cancel-button {
+    height: 4.5rem;
+    background-color: var(--color-gray);
+    color: var(--soft-ivory);
+}
+
+.profile-cancel-button:hover:not(:disabled) {
+    background-color: var(--color-gray-dark);
+    color: var(--color-white);
+    transform: translateY(-0.2rem);
+}
+
+.profile-field-error {
+    color: var(--color-quaternary);
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins-Medium';
+}
+
+.profile-field-error + .profile-input-group {
+    margin-top: -0.5rem;
+}
+
+/* Apartado de cierre de sesión */
+.logout-section {
+    background-color: var(--color-tertiary);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.logout-title {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    font-family: 'Poppins-Medium';
+    text-align: left;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.logout-info {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 500px;
+    text-align: left;
+}
+
+.profile-logout-button {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'Poppins-Medium';
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.profile-logout-button:hover {
+    background-color: var(--soft-ivory);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+    transform: translateY(-1px);
+}
+
+.profile-logout-button:active {
+    background-color: var(--color-white);
+    border-color: var(--color-secondary);
+    transform: translateY(0);
+}

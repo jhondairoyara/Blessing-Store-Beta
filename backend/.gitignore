@@ -1,0 +1,22 @@
+# 📦 Dependencias
+node_modules/
+
+# Logs del sistema
+*.log
+logs/
+npm-debug.log*
+
+# Cobertura de tests (si se llegaran a usar)
+coverage/
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración locales
+.vscode/
+*.local.*
+
+# Otros
+*.bak
+*.tmp

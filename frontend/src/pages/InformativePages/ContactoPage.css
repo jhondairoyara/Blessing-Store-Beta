@@ -1,0 +1,219 @@
+/* src/pages/InformativePages/ContactoPage.css */
+
+.contact-page-container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 4vw, 4rem) clamp(3rem, 6vw, 5rem);
+    
+    color: var(--color-white);
+    font-family: 'Poppins-Medium', sans-serif;
+    line-height: 1.6;
+}
+
+.contact-page-title {
+    font-family: 'LeagueSpartan-Bold', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.8rem;
+}
+
+.contact-page-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: clamp(7rem, 18vw, 14rem);
+    height: 0.5rem;
+    background-color: var(--color-primary);
+    border-radius: 0.3rem;
+}
+
+.contact-subtitle {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    color: var(--color-primary);
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.3rem;
+}
+
+.contact-subtitle::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: clamp(4rem, 12vw, 8rem);
+    height: 0.3rem;
+    background-color: var(--color-primary);
+    border-radius: 0.2rem;
+}
+
+.contact-section {
+    margin-bottom: clamp(3.5rem, 7vw, 6rem);
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.section-paragraph {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+    color: var(--color-white);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.channel-description,
+.form-intro-text {
+    font-size: 1.4rem;
+    color: var(--color-white);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.8rem;
+    text-align: left;
+}
+
+.contact-details-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    color: var(--color-white);
+}
+
+.contact-detail-item {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    text-align: left;
+    width: 100%;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-detail-item strong {
+    color: var(--color-white);
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+.contact-detail-item a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-detail-item a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.contact-detail-response-info {
+    font-size: 1.4rem;
+    color: var(--color-gray-medium);
+    margin-top: 1.2rem;
+    font-style: italic;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 5vw, 3.5rem);
+    background-color: var(--color-tertiary);
+    border-radius: 1.6rem;
+    border: 1px solid var(--color-gray);
+    box-shadow: 0 0.7rem 1.8rem rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-family: 'Poppins-Medium';
+    margin-bottom: 0.7rem;
+    color: var(--color-white);
+    font-size: 1.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 1.1rem 1.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.8rem;
+    border: 1px solid var(--color-tertiary);
+    color: var(--color-tertiary);
+    font-family: 'Poppins-Medium', sans-serif;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-gray-medium);
+    opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.3rem rgba(255, 222, 89, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 12rem;
+}
+
+.submit-button {
+    padding: 1.3rem 2.8rem;
+    font-size: 1.6rem;
+    font-family: 'LeagueSpartan-Bold', sans-serif;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: center;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 85%, black);
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.7rem 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.section-separator {
+    border: none;
+    border-top: 0.1rem solid var(--color-white);
+    width: 70%;
+    margin: 1.5rem auto;
+    opacity: 0.4;
+}

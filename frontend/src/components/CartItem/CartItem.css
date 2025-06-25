@@ -1,0 +1,185 @@
+/* src/components/CartItem/CartItem.css */
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid var(--color-gray-medium);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    position: relative;
+}
+
+/* Contenedor de la imagen del producto */
+.cart-item__image-wrapper {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen del producto */
+.cart-item__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Detalles del producto (nombre, atributos, precio) */
+.cart-item__details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Contenedor de acciones (cantidad, eliminar) */
+.cart-item__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Contenedor del subtotal del ítem */
+.cart-item__subtotal {
+    text-align: right;
+    font-weight: bold;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Nombre del producto */
+.cart-item__name {
+    font-size: 1.2em;
+    color: var(--color-secondary);
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Atributos del producto (color, talla) */
+.cart-item__attributes {
+    font-size: 0.9em;
+    color: var(--color-gray-dark);
+}
+
+/* Resaltado de valores de atributos */
+.cart-item__attributes span {
+    font-weight: bold;
+}
+
+/* Precio del producto */
+.cart-item__price {
+    font-size: 1.1em;
+    color: var(--color-quaternary);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Información de stock */
+.cart-item__stock-info {
+    font-size: 0.8em;
+    color: var(--color-gray-medium);
+}
+
+/* Estilo para el texto "Subtotal:" */
+.cart-item__subtotal span:first-child {
+    font-size: 0.9em;
+    color: var(--color-gray-dark);
+}
+
+/* Valor del subtotal */
+.cart-item__subtotal-value {
+    font-size: 1.3em;
+    color: var(--color-secondary);
+}
+
+/* Controles de cantidad */
+.cart-item__quantity-controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-gray-medium);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Botones de cantidad (+/-) */
+.qty-btn {
+    background-color: var(--soft-ivory);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+/* Efecto hover en botones de cantidad */
+.qty-btn:hover {
+    background-color: var(--btn-amount);
+}
+
+/* Iconos de botones de cantidad */
+.qty-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Campo de entrada de cantidad */
+.qty-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid var(--color-gray-medium);
+    border-right: 1px solid var(--color-gray-medium);
+    font-size: 1em;
+    padding: 8px 0;
+}
+
+/* Ocultar flechas en input type="number" */
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Botón de eliminar */
+.cart-item__remove-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    margin-top: 5px;
+}
+
+/* Efecto hover en botón de eliminar */
+.cart-item__remove-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Icono del botón de eliminar */
+.cart-item__remove-btn img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+/* Efecto hover en el icono del botón de eliminar */
+.cart-item__remove-btn:hover img {
+    opacity: 1;
+}

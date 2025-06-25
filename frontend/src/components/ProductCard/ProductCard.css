@@ -1,0 +1,164 @@
+/* frontend/src/components/ProductCard/ProductCard.css */
+
+.product-card {
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 20rem;
+    height: 33rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-secondary);
+    position: relative;
+    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 0.75rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-0.75rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+/* Enlace principal de la tarjeta (para toda el área clickeable) */
+.product-card__main-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Sección de imagen del producto */
+.product-card__image-wrapper {
+    display: block;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--color-gray-light);
+}
+
+.product-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Insignia de descuento */
+.product-card__discount {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background-color: var(--color-quaternary);
+    color: var(--color-white);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Área de información textual (contenedor para precios, nombre, descripción) */
+.product-card__info-area {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(33rem - 20rem);
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-family: 'Poppins-Medium';
+    overflow: hidden;
+}
+
+/* Precios del producto */
+.product-card__price {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.product-card__old-price {
+    text-decoration: line-through;
+    color: var(--color-gray-medium);
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.product-card__new-price {
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+/* Encabezado: nombre y botón de carrito */
+.product-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    min-height: 2.5rem;
+}
+
+/* Nombre del producto */
+.product-card__name {
+    flex: 1;
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 3;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Descripción del producto */
+.product-card__desc {
+    font-size: 0.95rem;
+    color: var(--color-gray-dark);
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Botón de añadir al carrito */
+.product-card__cart {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+    pointer-events: auto;
+}
+
+.product-card__cart:hover {
+    background-color: var(--color-gray-light);
+}
+
+.product-card__cart img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}

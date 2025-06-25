@@ -1,0 +1,24 @@
+/* src/pages/Categories/category-base.css */
+
+.main-content-page {
+    padding: 4rem 3rem 0 3rem;
+}
+
+/* Estilos para el banner superior genérico de categoría. */
+.category__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    color: var(--color-white); 
+}
+
+/* Estilos del título dentro del banner de categoría. */
+.category__hero h2 {
+    font-family: 'LeagueSpartan-Bold';
+    font-size: 4.5rem;
+    text-align: center;
+    color: var(--color-white);
+}

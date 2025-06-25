@@ -1,0 +1,113 @@
+/* src/pages/InformativePages/TerminosCondicionesPages.css */
+
+.terms-page-container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 4vw, 4rem) clamp(3rem, 6vw, 5rem);
+    
+    color: var(--color-white);
+    font-family: 'Poppins-Medium', sans-serif;
+    line-height: 1.6;
+}
+
+.terms-page-title {
+    font-family: 'LeagueSpartan-Bold', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.8rem;
+}
+
+.terms-page-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: clamp(7rem, 18vw, 14rem);
+    height: 0.5rem;
+    background-color: var(--color-primary);
+    border-radius: 0.3rem;
+}
+
+.terms-subtitle {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    color: var(--color-primary);
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.3rem;
+}
+
+.terms-subtitle::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: clamp(4rem, 12vw, 8rem);
+    height: 0.3rem;
+    background-color: var(--color-primary);
+    border-radius: 0.2rem;
+}
+
+.terms-section {
+    margin-bottom: clamp(3.5rem, 7vw, 6rem);
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.section-paragraph {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+    color: var(--color-white);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.tech-list {
+    font-size: 1.4rem;
+    color: var(--color-white);
+    max-width: 800px;
+    margin: 1.5rem auto 2.5rem auto;
+    text-align: left;
+    list-style: disc;
+    padding-left: 2.5rem;
+}
+
+.tech-list li {
+    margin-bottom: 0.8rem;
+}
+
+.tech-list li:last-child {
+    margin-bottom: 0;
+}
+
+.tech-list strong {
+    color: var(--color-primary);
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+.privacy-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+.section-separator {
+    border: none;
+    border-top: 0.1rem solid var(--color-white);
+    width: 60%; /* Ajuste a 60% */
+    margin: 1.5rem auto;
+    opacity: 0.4;
+}

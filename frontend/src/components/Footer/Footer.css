@@ -1,0 +1,173 @@
+/* src/components/Footer.css */
+
+.footer-blessing {
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+    padding: 3rem 2rem;
+    font-size: 1.4rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    margin-top: 5rem;
+}
+
+/* Contenedor principal de las secciones */
+.footer-blessing__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Sección de la marca (logo y título) */
+.footer-blessing__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 20rem;
+}
+
+/* Contenedor del logo y el título */
+.footer-blessing__logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos del logo */
+.footer-blessing__logo {
+    width: 5rem;
+    height: auto;
+}
+
+/* Estilos del título de la marca */
+.footer-blessing__title {
+    font-family: 'AlexBrush-Regular'; 
+    font-size: 3.6rem;
+    color: var(--color-white);
+    white-space: nowrap;
+}
+
+/* Sección de la misión de la tienda */
+.footer-blessing__mission {
+    flex: 2;
+    color: var(--color-white);
+    font-size: 1rem;
+    line-height: 1.6;
+    min-width: 30rem;
+}
+
+/* Título de la misión */
+.footer-blessing__mission h4 {
+    font-family: 'Poppins-Bold';
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin-bottom: 0.2rem;
+}
+
+/* Párrafo de la misión */
+.footer-blessing__mission p {
+    font-family: 'Poppins-Bold';
+    color: var(--color-white);
+    font-size: 1.2rem;
+}
+
+/* Sección de redes sociales */
+.footer-blessing__social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 20rem;
+}
+
+/* Título de redes sociales */
+.footer-blessing__social h4 {
+    font-family: 'Poppins-Bold';
+    color: var(--color-white);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Contenedor de los iconos de redes sociales */
+.footer-blessing__social-icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-start;
+}
+
+/* Estilos de los enlaces de iconos de redes sociales */
+.footer-blessing__icon-link {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--color-gray);
+    padding: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en los enlaces de iconos */
+.footer-blessing__icon-link:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Estilos de las imágenes de los iconos de redes sociales */
+.footer-blessing__icon-link img {
+    width: 1.6rem;
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+/* Separador visual entre secciones del pie de página */
+.footer-blessing__links-separator {
+    width: 100%;
+    border-top: 0.1rem solid var(--color-white);
+    margin: 2rem 0 1rem 0;
+}
+
+/* Enlaces de navegación en la parte inferior del pie de página */
+.footer-blessing__bottom-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.4rem;
+}
+
+/* Estilos de los enlaces de navegación */
+.footer-blessing__bottom-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: 'Poppins-Bold';
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover en los enlaces de navegación */
+.footer-blessing__bottom-links a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Información de derechos de autor y créditos */
+.footer-blessing__copyright-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: var(--color-white);
+    text-align: center;
+}
+
+/* Párrafos de información de derechos de autor */
+.footer-blessing__copyright-info p {
+    margin-bottom: 0.3rem;
+    font-family: 'Poppins-Bold';
+    font-size: 1.2rem;
+}
