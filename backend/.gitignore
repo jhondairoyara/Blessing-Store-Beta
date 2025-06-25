@@ -20,3 +20,6 @@ Thumbs.db
 # Otros
 *.bak
 *.tmp
+
+# Variables de entorno
+.env
